@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In Loop</title>
+</head>
+<body>
+    <script>
+        var user = {
+            name:"John",
+            Age:30,
+            Admin: true
+        };
+
+        for(var key in user){
+            document.write("<br>" + key );
+            document.write(user[key]);
+        }
+    </script>
+</body>
+</html>

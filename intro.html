@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+
+    <!-- <h1 onclick="demo()" id="head1">hello</h1> -->
+
+
+    <script>
+        // document.write('hello it\'s '); document.write('hello')
+
+        // var a=10;
+
+        // document.write("<br> a = "+ a)
+        // // console.log(a)
+
+
+        // if(10<20)
+        // {
+        //     document.write();
+        // }
+        // else
+        // {
+        //     document.write();
+        // }
+
+        // i=0;
+        // while(i<10)
+        // {
+        //     document.write("<br>" + i);
+        //     i++;
+        // }
+        // for(intialize; condition; inc/dec)
+        // {
+        //     statement;
+        // }
+
+        // alert(i);
+
+        // if(confirm('are you 18+ ?'))
+        // {
+        //     document.write('you can vote.')
+        // }
+        // else
+        // {
+        //     document.write('you can\'t vote.')
+        // }
+
+
+        // var str = prompt('enter value 1');
+        // var str1 = prompt('enter value 2');
+
+        // alert(parseInt(str) + parseInt(str1) )
+
+        // alert('hello')
+
+        // if(confirm('are you 18+ ?'))
+        // {
+        //     document.write('you can vote...')
+        // }
+        // else
+        // {
+        //     document.write('you can\'t vote...')
+        // }
+    
+
+        // var a = prompt('enter value of a.')
+        // document.write(a)
+
+        function demo()
+        {
+            // alert('demo calling');
+            // document.getElementById('head1').innerText="<b>heading 1 tag</b>"
+            // document.getElementById('head1').innerHTML="<i>heading 1 tag</i>"
+        }
+            
+        // demo();
+
+
+        var str = "creative design";
+
+        document.write(str)
+        document.write("<br>"+str.big())
+        document.write("<br>"+str.small())
+        document.write("<br>"+str.fontcolor('blue').big())
+        document.write("<br>"+str.concat(' and multimedia'))
+        document.write("<br>"+str.indexOf('e'))
+        document.write("<br>"+str.lastIndexOf('e'))
+        document.write("<br>"+str.match('dsign'))
+        document.write("<br>"+str.search('design'))
+        document.write("<br>"+str.slice(5,10))
+        document.write("<br>"+str.substr(5,10))
+        document.write("<br>"+str.substring(5,10))
+        
+        
+        document.write("<br><br> Math Function <br>")
+
+        document.write("<br>" + Math.abs(-10))
+        document.write("<br>" + Math.ceil(26.1))
+        document.write("<br>" + Math.floor(26.1))
+        document.write("<br>" + Math.round(26.55))
+
+
+        var fruit = ['grapes','apple','mango','watermelon','banana'];
+
+        // document.write("<br>" + fruit[2])
+        document.write("<br>" + fruit.join('  =  '))
+        // fruit.pop()
+        document.write("<br>" + fruit)
+        fruit.push('pineapple')
+        document.write("<br>" + fruit)
+        document.write("<br>" + fruit.reverse().sort())
+        document.write("<br>" + fruit.length)
+
+    </script>
+    
+</body>
+</html>

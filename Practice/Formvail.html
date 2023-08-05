@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From_In_JS</title>
+</head>
+<style>
+    body{
+        background-color: lightgray;
+    }
+    .tha{
+        align-items: center;
+        border: 2px solid black;
+        box-shadow: 5px 5px 5px black;
+        background-color: transparent;
+        color:#01362C;
+        font-size: 25px;
+        font-weight: 900;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .box{
+        box-shadow: 5px 5px 5px black;
+        border: 1px solid black;
+        font-weight: 700;
+        font-size: 20px;
+        background-color: transparent;
+        border-radius: 5px;
+    }
+    .box2{
+        box-shadow: 5px 5px 5px black;
+        border: 1px solid black;
+        font-weight: 700;
+        font-size: 20px;
+        width: 270px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+    .box1{
+        box-shadow: 5px 5px 5px black;
+        border: none;
+        color: #D35400;
+        background-color: #01362C;
+        margin-top: 20px;
+        padding: 5px 15px; 
+        font-weight: 900;
+        font-size: 20px;
+        border-radius: 5px;
+    }
+    .p1{
+        display: flex;
+        justify-content: center;
+    }
+    h1{
+        text-align: center;
+        color: #D35400;
+    }
+</style>
+
+<body>
+    <h1>Form Validtion</h1>
+    <form onsubmit=" return Validdata();" class="p1">
+        <table class="tha">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" id="name" class="box"></td>
+            </tr>   
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="" id="email" class="box"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="text" name="" id="password" class="box"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="text" name="" id="cpass" class="box"></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    <select name="" id="city" class="box2">
+                        <option value="Select City" selected>Select City</option>
+                        <option value="">surat</option>
+                        <option value="">vapi</option>
+                        <option value="">baroda</option>
+                        <option value="">valsad</option>
+                        <option value="">navsari</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="sex" id="gender" class="h1">Male
+                    <input type="radio" name="sex" id="gender" class="h1">Female
+                    <input type="radio" name="sex" id="gender" class="h1">Other
+                </td>
+            </tr>
+            <tr>
+                <td>Hobby</td>
+                <td>
+                    <input type="checkbox" name="khubi" class="h1" id="hobby">Cricket <br>
+                    <input type="checkbox" name="khubi" class="h1" id="hobby">Traveling<br>
+                    <input type="checkbox" name="khubi" class="h1" id="hobby">Reading<br>
+                    <input type="checkbox" name="khubi" class="h1" id="hobby">Public Communication<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Mobile No.</td>
+                <td><input type="text" name="" id="number" class="box"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="" id="" class="box1">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function Validdata() {
+        var name = document.getElementById('name').value;
+        if (name == '') {
+            alert("Enter Name")
+            return false;
+        }
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var email =document.getElementById('email').value
+            if(email == '')
+            {
+                alert('Plese Enter an email')
+                return false;
+            }
+            if(!email.match(mailformat)){
+                alert('Enter Correct Email')
+                return false;
+            }
+            var passw = /^[A-Za-z]\w{8,14}$/;
+            var password = document.getElementById('password').value;
+            var cpass = document.getElementById('cpass').value;
+            if (password == '') {
+                alert('Please enter a password');
+                return false;
+            }
+            if (!password.match(passw)) {
+                alert('Please Enter a Correct Password')
+                return false;
+            }
+            if (cpass == '') {
+                alert('Please Enter a Confirm Password');
+                return false;
+            }
+            if (password != cpass) {
+                alert('Not Mach Password')
+                return false;
+            }
+            var hobby = document.getElementById('hobby');
+            if (!hobby.checked(hobby)) {
+                alert("Enter Hobby")
+                return false;
+            }
+            var gender = document.getElementById('gender');
+            // console.log(gender);
+            if (gender == '') {
+                alert("Fill the Gender")
+                return false;
+            }
+            var contentvalide =/^\d{10}$/;
+            var number =document.getElementById('number').value
+                if(!number.match(contentvalide))
+                {
+                    alert('Enter Your Valide Phone No.');
+                    return false;
+                }
+    }
+</script>
+
+</html>

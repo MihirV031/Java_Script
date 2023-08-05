@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arethmatic</title>
+
+    <style>
+        body
+        {
+            display: flex;
+            text-align: center;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #8052ec;
+        }
+        .pop{
+            border: none;
+            border-radius: 8px;
+            border: 1px solid black; 
+            font-size: 20px;
+            font-weight: 600;
+            background-color: #B8CAE1;
+            color: blueviolet;
+        }
+        .btn{
+            background-color: black;
+            color: wheat;
+            font-size: 15px;
+            font-weight: 600;
+            border: 2px solid burlywood;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px black;
+            padding: 5px 20px;
+        }
+    </style>
+
+    <script>
+        // function getdata()
+        // {
+        //     var No1 = document.getElementById("no1").value
+        //     var No2 = document.getElementById("no2").value
+
+        //     var z = parseInt(No1) + parseInt(No2);
+        //     alert(z);
+        //     document.getElementById("Ans").value= z ;
+        // }
+        // function getdata1()
+        // {
+        //     var No1 = document.getElementById("no1").value
+        //     var No2 = document.getElementById("no2").value
+
+        //     var z = parseInt(No1) - parseInt(No2);
+        //     alert(z);
+        //     document.getElementById("Ans").value= z ;
+        // }
+        // function getdata2()
+        // {
+        //     var No1 = document.getElementById("no1").value
+        //     var No2 = document.getElementById("no2").value
+
+        //     var z = parseInt(No1) * parseInt(No2);
+        //     alert(z);
+        //     document.getElementById("Ans").value= z ;
+        // }
+        // function getdata3()
+        // {
+        //     var No1 = document.getElementById("no1").value
+        //     var No2 = document.getElementById("no2").value
+
+        //     var z = parseInt(No1) / parseInt(No2);
+        //     alert(z);
+        //     document.getElementById("Ans").value= z ;
+        // }
+
+        function getdata(Condition)
+        {
+            var No1 = document.getElementById("no1").value;
+            var No2 = document.getElementById("no2").value;
+            var a; 
+            if(Condition == 'sum')
+            {
+               a = parseInt(No1) + parseInt(No2);
+            }
+            else if(Condition == 'sub')
+            {
+                a = parseInt(No1) - parseInt(No2);
+            }
+            else if(Condition == 'mul')
+            {
+                a = parseInt(No1) * parseInt(No2);
+            } 
+            else if(Condition == 'div')
+            {
+                a = parseInt(No1) / parseInt(No2);
+            }
+            document.getElementById("Ans").value = a;    
+        }
+    </script>
+</head>
+<body>
+    <!-- <div class="Aretmatic">
+        No-1   <input type="text" id="no1" name="">
+            <br>
+            <br>
+        No-2   <input type="text" id="no2" name="">
+            <br>
+            <br>
+        <input type="button" value="Sum" onclick="getdata()">
+        <input type="button" value="Sub" onclick="getdata1()">
+        <input type="button" value="Mul" onclick="getdata2()">
+        <input type="button" value="Div" onclick="getdata3()">
+            <br>
+            <br>
+        <input type="text" readonly id="Ans">
+        </div> -->
+
+        <div class="Aretmatic">
+            No-1   <input type="text" class="pop" id="no1" name="">
+                <br>
+                <br>
+            No-2   <input type="text" class="pop" id="no2" name="">
+                <br>
+                <br>
+            <input type="button" class="btn" value="Sum" onclick="getdata('sum');">
+            <input type="button" class="btn" value="Sub" onclick="getdata('sub');">
+            <input type="button" class="btn" value="Mul" onclick="getdata('mul');">
+            <input type="button" class="btn" value="Div" onclick="getdata('div');">
+                <br>
+                <br>
+            Ans:-<input type="text" class="pop" readonly id="Ans">
+        </div>
+</body>
+</html>

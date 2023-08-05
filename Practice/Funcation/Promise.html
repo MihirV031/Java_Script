@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Funcation</title>
+</head>
+<body>
+    <input type="button" id="Mi" onclick="getdata();" value="click here">  
+    <script>
+        function getdata(){
+            var pro = new Promise ((resolve,reject)=>
+            {
+                setTimeout(()=>
+                {
+                    if(true){
+                        resolve("Hello");
+                    }
+                    else{
+                        reject("Error");
+                    }
+                },1000);
+            });
+            pro.then((a)=>{
+                document.write(a)
+            }).catch((b)=>{
+                document.write(b)
+            })
+        }
+            </script>
+</body>
+</html>

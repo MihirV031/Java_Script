@@ -1,0 +1,86 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+}
+p{
+    font-size: 18px;
+    font-weight: 300;
+    color: wheat;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 5px 5px 8px rgb(38, 37, 37);
+}
+.bgcolor {
+    background-color: #000000;
+    color: #23BFE4;
+    align-items: center;
+}
+.logo {
+    border-radius: 20px;
+    width: 80px;
+    margin-right: 20px;
+}
+.bgtheme{
+    background-color: #4ed1f1;
+}
+.manuimg img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 10px 10px 10px;
+}
+.secd{
+    margin-top: 100px;
+}
+.box
+{
+    background-color: rgb(38, 37, 37);
+    color: #51b6cf;
+    border: 2px solid darkcyan;
+    border-radius: 30px 30px 30px 0px;
+    box-shadow: 8px 8px 5px rgb(38, 37, 37) ;
+    padding-bottom:20px;
+    padding-left: 20px;
+    margin:0px 8px ;
+    opacity: 0.9;
+}
+.box:hover{
+    opacity: 1;
+}
+.chack h5{
+    margin-right: 10px;
+}
+.chack input{
+    margin-left:10px;
+    width: 25px;
+}
+.h1{
+    letter-spacing: 5px;
+    color: rgb(38, 37, 37);
+    text-shadow:5px 10px 8px darkslategrey;
+    font-size: 50px;
+    font-weight: 900;
+}
+.ed{
+    padding: 30px;
+    background-color: #000;
+    color: #23BFE4;
+}
+.fd h5{
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 8px 8px 6px #23BFE4;
+}
+.img{
+    width:200px;
+    margin-left: 150px;
+}
+.bgdark{
+    margin-top: 120px;
+}

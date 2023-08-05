@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tic Game</title>
+</head>
+
+<style>
+    body {
+        background-color: #8052ec;
+    }
+
+    .container 
+    {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .col
+    {
+        width: 350px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .one 
+    {
+        position: absolute;
+        top: 35%;
+        right: 20%;
+        font-size: 25px;
+        font-weight: 900;
+        padding: 8px 25px;
+        background-color: #B8CAE1;
+        color: #8052ec;
+        border-radius: 10px;
+        border: 2px solid wheat;
+        box-shadow: 3px 3px 10px burlywood;
+    }
+
+    .col input 
+    {
+        width: 116.66px;
+        height: 116.66px;
+        font-size: 50px;
+        font-weight: 900;
+        border-radius: 5px;
+        border: 1px solid wheat;
+        background-color: #B8CAE1;
+        color: #8052ec;
+        box-shadow: 5px 5px 20px black;
+    }
+
+    h1 
+    {
+        text-align: center;
+        color: #F9CCCC;
+    }
+</style>
+
+<body>
+    <h1>ox:- Tic-Tic Game -:xo</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <input type="button" class="Mihir" id='B1' onclick="btn1()">
+                <input type="button" class="Mihir" id='B2' onclick="btn2()">
+                <input type="button" class="Mihir" id='B3' onclick="btn3()">
+                <input type="button" class="Mihir" id='B4' onclick="btn4()">
+                <input type="button" class="Mihir" id='B5' onclick="btn5()">
+                <input type="button" class="Mihir" id='B6' onclick="btn6()">
+                <input type="button" class="Mihir" id='B7' onclick="btn7()">
+                <input type="button" class="Mihir" id='B8' onclick="btn8()">
+                <input type="button" class="Mihir" id='B9' onclick="btn9()">
+                <h1 id="print" class="i_win"></h1>
+            </div>
+        </div>
+        <button id="set" onclick="window.location = 'tic-tic.html'" class="one">Restart</button>
+    </div>
+</body>
+
+<script>
+    var temp = 0;
+    function btn1() 
+    {
+        if (temp % 2 == 0) 
+        {
+            document.getElementById('B1').value = 'x';
+            document.getElementById('B1').disabled = true;
+        }
+        else 
+        {
+            document.getElementById('B1').value = '0';
+            document.getElementById('B1').disabled = true;
+        }
+        temp++;
+        win();
+    }
+    function btn2() 
+    {
+        if (temp % 2 == 0) 
+        {
+            document.getElementById('B2').value = 'x';
+            document.getElementById('B2').disabled = true;
+        }
+        else 
+        {
+            document.getElementById('B2').value = '0';
+            document.getElementById('B2').disabled = true;
+        }
+        temp++;
+        win();
+    }
+    function btn3() 
+    {
+        if (temp % 2 == 0) 
+        {
+            document.getElementById('B3').value = 'x';
+            document.getElementById('B3').disabled = true;
+        }
+        else 
+        {
+            document.getElementById('B3').value = '0';
+            document.getElementById('B3').disabled = true;
+        }
+        temp++;
+        win();
+    }
+    function btn4() 
+    {
+        if (temp % 2 == 0) 
+        {
+            document.getElementById('B4').value = 'x';
+            document.getElementById('B4').disabled = true;
+        }
+        else 
+        {
+            document.getElementById('B4').value = '0';
+            document.getElementById('B4').disabled = true;
+        }
+        temp++;
+        win();
+    }
+    function btn5() 
+    {
+        if (temp % 2 == 0) 
+        {
+            document.getElementById('B5').value = 'x';
+            document.getElementById('B5').disabled = true;
+        }
+        else 
+        {
+            document.getElementById('B5').value = '0';
+            document.getElementById('B5').disabled = true;
+        }
+        temp++;
+        win();
+    }
+    function btn6() 
+    {
+        if (temp % 2 == 0) 
+        {
+            document.getElementById('B6').value = 'x';
+            document.getElementById('B6').disabled = true;
+        }
+        else 
+        {
+            document.getElementById('B6').value = '0';
+            document.getElementById('B6').disabled = true;
+        }
+        temp++;
+        win();
+    }
+
+    function btn7() 
+    {
+        if (temp % 2 == 0) 
+        {
+            document.getElementById('B7').value = 'x';
+            document.getElementById('B7').disabled = true;
+        }
+        else 
+        {
+            document.getElementById('B7').value = '0';
+            document.getElementById('B7').disabled = true;
+        }
+        temp++;
+        win();
+    }
+    function btn8() 
+    {
+        if (temp % 2 == 0) 
+        {
+            document.getElementById('B8').value = 'x';
+            document.getElementById('B8').disabled = true;
+        }
+        else 
+        {
+            document.getElementById('B8').value = '0';
+            document.getElementById('B8').disabled = true;
+        }
+        temp++;
+        win();
+    }
+    function btn9() 
+    {
+        if (temp % 2 == 0) 
+        {
+            document.getElementById('B9').value = 'x';
+            document.getElementById('B9').disabled = true;
+        }
+        else 
+        {
+            document.getElementById('B9').value = '0';
+            document.getElementById('B9').disabled = true;
+        }
+        temp++;
+        win();
+    }
+
+    function win() 
+    {
+            B1 = document.getElementById('B1').value;
+            B2 = document.getElementById('B2').value;
+            B3 = document.getElementById('B3').value;
+            B4 = document.getElementById('B4').value;
+            B5 = document.getElementById('B5').value;
+            B6 = document.getElementById('B6').value;
+            B7 = document.getElementById('B7').value;
+            B8 = document.getElementById('B8').value;
+            B9 = document.getElementById('B9').value;
+
+            if (B1 == 'x' && B2 == 'x' && B3 == 'x' ||
+                B4 == 'x' && B5 == 'x' && B6 == 'x' ||
+                B7 == 'x' && B8 == 'x' && B9 == 'x' ||
+                B1 == 'x' && B4 == 'x' && B7 == 'x' ||
+                B2 == 'x' && B5 == 'x' && B8 == 'x' ||
+                B3 == 'x' && B6 == 'x' && B9 == 'x' ||
+                B3 == 'x' && B5 == 'x' && B7 == 'x' ||
+                B1 == 'x' && B5 == 'x' && B9 == 'x') 
+            {
+                document.getElementById('print').innerHTML = 'playaer win = x';
+                document.getElementById('print').style.backgroundColor = "#B8CAE1";
+                document.getElementById('print').style.color = "#8052ec";
+                var r = document.getElementsByClassName('Mihir');
+                for (var i = 0; i < r.length; i++) 
+                {
+                    r[i].disabled = "true";
+                }
+            }
+            else if (B1 == '0' && B2 == '0' && B3 == '0' ||
+                B4 == '0' && B5 == '0' && B6 == '0' ||
+                B7 == '0' && B8 == '0' && B9 == '0' ||
+                B1 == '0' && B2 == '0' && B3 == '0' ||
+                B2 == '0' && B5 == '0' && B8 == '0' ||
+                B3 == '0' && B6 == '0' && B9 == '0' ||
+                B3 == '0' && B5 == '0' && B7 == '0' ||
+                B1 == '0' && B5 == '0' && B9 == '0') 
+            {
+                document.getElementById('print').innerHTML = 'playaer win = 0';
+                document.getElementById('print').style.backgroundColor = "#B8CAE1";
+                document.getElementById('print').style.color = "#8052ec";
+                var r = document.getElementsByClassName('Mihir');
+                for (var i = 0; i < r.length; i++) {
+                    r[i].disabled = "true";
+                }
+            }
+            else if ((B1 == '0' || B1 == 'x') &&
+                (B2 == '0' || B2 == 'x') &&
+                (B3 == '0' || B3 == 'x') &&
+                (B4 == '0' || B4 == 'x') &&
+                (B5 == '0' || B5 == 'x') &&
+                (B6 == '0' || B6 == 'x') &&
+                (B7 == '0' || B7 == 'x') &&
+                (B8 == '0' || B8 == 'x') &&
+                (B9 == '0' || B9 == 'x')) 
+            {
+                document.getElementById('print').innerHTML = 'Match is a Draw';
+            }
+    }
+
+</script>
+
+</html>

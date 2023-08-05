@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async_Await</title>
+    <style>
+        .mihir{
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="Mi" onclick="getdata();" value="click here" class="mihir">  
+    <script>
+        function getdata(){
+            var pro = new Promise ((resolve,reject)=>
+            {       
+                setTimeout(()=>
+                {
+                    if(true){
+                        resolve = document.getElementById('Mi').style.backgroundColor = "#353535";
+                    }
+                    else{
+                        reject = document.getElementById('Mi').style.backgroundColor = "#0000";
+                    }
+                },1000);
+            });
+            async function data(){
+                var data = await pro;
+                try{
+                    document.write = document.getElementById('Mi').style.backgroundColor = "#353535";
+                }
+                catch{
+                    document.write = document.getElementById('Mi').style.backgroundColor = "#0000";
+                }
+            }
+            data()
+        }
+    </script>
+</body>
+</html>

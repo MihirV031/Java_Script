@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop in js</title>
+</head>
+<body>
+    <script>
+        // For Loop---->>
+        // var x =parseInt(prompt("Enter your number"));
+        // for(var i=0;i<=10;i++){
+        //     var result = i * x;
+        //     document.write(`${x}* ${i} = ${result}`);
+        //     document.write('<br>')
+        // }
+
+        // While Loop---->>>>
+        // var x = parseInt(prompt("Enter your Number"));
+        // var i=0;
+        // while(i<=10){
+        //     var result = i*x;
+        //     document.write(`${x}* ${i} = ${result}`);
+        //     document.write('<br>')
+        //     i++;
+        // }
+
+        // For_In Loop-Opject----------->>>>
+        
+        var parson ={
+            Parson1 : "Mihir",
+            parson2 : "Yash",
+            parson3 : "Ashish"
+        };
+
+        for(var key in parson){
+            document.write('<br>'+key,parson[key]);
+        }
+
+        // For_In Loop-Array------>>>
+
+        var names = ["Mihir","Ashish","Yash","Akash"]
+        for(var index in names){
+            document.write('<br>'+index, names[index])
+        }
+        
+        
+        //For_Fo Loop-Object----------------->>>>>>>>>
+        for(var name of names){
+            document.write('<br>'+name,)
+        }
+    </script>
+</body>
+</html>

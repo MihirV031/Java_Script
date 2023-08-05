@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        Enter Your Birth Date <br><br>
+        <input type="text" placeholder="DD" class="birthDate" name="" id="date">
+        <input type="text" placeholder="MM" class="birthDate" name="" id="month">
+        <input type="text" placeholder="YYYY" class="birthDate" name="" id="year">
+        <br><br>
+        Enter You Want to Date You want to Calculate<br> <br>
+        <input type="text" placeholder="DD" class="birthDate" name="" id="another-date">
+        <input type="text" placeholder="MM" class="birthDate" name="" id="another-month">
+        <input type="text" placeholder="YYYY" class="birthDate" name="" id="another-year">
+        <br><br>
+        <input type="button" value="Calculate" onclick="agecalculate();">
+        <br>
+        <br>
+        <div type="text" id="final-result"></div>
+    </form>
+</body>
+<script src="script.js"></script>
+</html>

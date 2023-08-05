@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silder_Photos</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    body
+    {
+        background-image: url(Slider\ Img/bg.png);
+    }
+    .slider img
+    {
+        width: 1100px;
+        height: 500px;
+        position: absolute;
+        top: 10px;
+        left: 122px;
+        border-radius: 5px;
+        border: 3px solid darkslategrey;
+        box-shadow: 5px 5px 25px black; 
+    }
+    .main input
+    {
+        border-radius: 50%;
+        border: 1px solid black ;
+    }   
+    .ab1
+        {   
+            position: absolute;
+            z-index: 1;
+            padding: 5px;
+            background-color: transparent;
+            border: 3px solid black;
+            border-radius: 10px;
+            left: 15px;
+            top: 50%;
+            font-size: 40px;
+            font-weight: 600;
+            color: whitesmoke;
+        }
+        input:hover
+        {
+            background-color: black;
+            color: wheat;
+        }
+    .ab2
+        {
+            position: absolute;
+            z-index: 1;
+            padding: 5px;
+            background-color: transparent;
+            border: 3px solid black;
+            border-radius: 10px;
+            right: 15px;
+            top: 50%;
+            font-size: 40px;
+            font-weight: 600;
+            color: whitesmoke;
+        }
+    .tapku 
+    {
+        display: flex;
+        position: absolute;
+        bottom: -2%;
+        left: 7%;
+        list-style: none;
+    }
+    .tapku li img
+    {
+        border: 3px solid darkslategrey;
+        box-shadow: 5px 5px 25px darkblue; 
+        width:90px;
+        height: 90px;
+        margin: 10px;
+        opacity: 0.6;
+        transition: all .5s;
+    }
+    .tapku li img:hover
+    {
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+</style>
+<body>
+    <div class="slider">
+    <img src=" " id="Slider">
+    </div>
+        <ul class="tapku">
+            <li><img onclick="imgslider('Slider Img/S-1.jpg')" src="Slider Img/S-1.jpg" alt=""></li>
+            <li><img onclick="imgslider('Slider Img/S-2.jpg')" src="Slider Img/S-2.jpg" alt=""></li>
+            <li><img onclick="imgslider('Slider Img/S-3.jpg')" src="Slider Img/S-3.jpg" alt=""></li>
+            <li><img onclick="imgslider('Slider Img/S-4.png')" src="Slider Img/S-4.png" alt=""></li>
+            <li><img onclick="imgslider('Slider Img/S-5.jpg')" src="Slider Img/S-5.jpg" alt=""></li>
+            <li><img onclick="imgslider('Slider Img/S-6.png')" src="Slider Img/S-6.png" alt=""></li>
+            <li><img onclick="imgslider('Slider Img/S-7.jpg')" src="Slider Img/S-7.jpg" alt=""></li>
+            <li><img onclick="imgslider('Slider Img/S-8.jpg')" src="Slider Img/S-8.jpg" alt=""></li>
+            <li><img onclick="imgslider('Slider Img/S-9.jpg')" src="Slider Img/S-9.jpg" alt=""></li>
+            <li><img onclick="imgslider('Slider Img/S-10.jpg')" src="Slider Img/S-10.jpg" alt=""></li>
+        </ul>
+        <!-- <input type="button" value="Prev" onclick="Prev();" class="ab1">
+        <input type="button" value="Next" onclick="Next();" class="ab2"> -->
+    
+    <!-- <div id="tapku">
+        <span class="dotas">
+            <img src="Slider Img/S-1.jpg" alt="">
+        </span>
+        <span class="dotas">
+            <img src="Slider Img/S-2.jpg" alt="">
+        </span>
+        <span class="dotas">
+            <img src="Slider Img/S-3.jpg" alt="">
+        </span>
+        <span class="dotas">
+            <img src="Slider Img/S-4.png" alt="">
+        </span>
+        <span class="dotas">
+            <img src="Slider Img/S-5.jpg" alt="">
+        </span>
+    </div> -->
+</body>
+<script>
+    var temp = 0;
+    var img = document.getElementsByClassName("img");
+    var dot = document.getElementsByClassName("dotas");
+    function sliderdata()
+    {
+
+        for (var i=0; i<img.length; i++) 
+        {
+            img[i].style.display = "none";    
+            // dot[i].style.border = 'gray';   
+        }
+
+        img[temp].style.display = "block";
+        // dot[temp].style.border = 'Red';
+    }
+    // function Next()
+    // {
+    //     if(temp == img.length -1)
+    //     {
+    //         temp = -1;
+    //     }
+    //     temp++; 
+    //     sliderdata();
+    // }
+    // function Prev()
+    // {
+    //     temp--;
+    //     if(temp == -1)
+    //     {
+    //         temp = img.length -1;
+    //     }
+    //     sliderdata();
+    // }
+    window.onload = function()
+    {
+        sliderdata();
+    }
+    function imgslider(img)
+    {
+        document.getElementById("Slider").src = img;
+    }
+</script>
+</html>

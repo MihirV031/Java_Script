@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second JS</title>
+</head>
+<body>
+    <input type="button" value="Click Here" id="mi" onclick="getdata();"> 
+    <br>
+    <br>
+    <input type="button" value="Click Here" class="ni" onclick="info();">
+    <br>
+    <br>
+    <h1>Switch case condition</h1>
+
+    <script>
+        function getdata(){
+            var x = document.getElementById('mi').innerHTML = "Hello World";
+            document.write(x) 
+        }
+
+        //concat Function & User Input -------->>>>>> 
+
+        // function info(){
+        //     var firstName = "Mihir";
+        //     var LastName = "Vitthani";
+        //     const price = 99;
+        //     var courseName = "Web Devlopment";
+        //     var Contanct = 9723570012;
+        //     var ipad = true;
+        //     var mypayment;
+        //     mypayment = prompt("Enter your course fee");
+            
+        //     document.write('<br>' +firstName + LastName + " Sucessfully course complete " + courseName +"__ " + "Only in " + mypayment);
+        // }
+
+        // if-else Condition--------->>>>>>
+        function info(){
+            var y = prompt("Enter your Age");
+            if(y >=18)
+            {
+                document.write("You are mature");
+            }
+            else{
+                document.write("You are child")
+            }
+        }
+
+        // Swich Case---------------->>>>>
+
+        var cars = prompt("Your fav car company?");
+        switch(cars){
+            case 'Toyota' :
+                document.write("Toyota supra");
+            break;
+            case 'Lamborgini':
+                document.write("Lomborgini hurecan");
+            break;
+            case 'BMW':
+                document.write("BMW M5");
+            break;
+            case 'Macleran':
+                document.write("Macleran 720s");
+            break;
+            case 'Bugatti':
+                document.write("Bugatti Dou");
+            break;
+            case 'Pagani':
+                document.write("Pagani Huayra");
+            break;
+            default:
+                document.write(`${cars} Other cars also you can selecteing in some time.`);
+            break;
+        }
+        
+        document.write('<br>'+ "Keep Search for New Cars")
+    </script>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Funcation</title>
+</head>
+<body>
+    <script>
+        var user = [
+            {id:1, name:"Mihir"},
+            {id:2, surname:"Vitthani"},
+            {id:3, Age:23}
+        ];
+
+        var someuser = user.filter(item => item.Age == 23);
+        document.write(someuser); 
+    </script>
+</body>
+</html>

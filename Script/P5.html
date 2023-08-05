@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcation_in_JS With user input</title>
+</head>
+<style>
+    body{
+        font-size: 20px;
+        font-weight: 900;
+        
+    }
+</style>
+<body>
+    <script>
+        var farpp = prompt("Enter your Farppuccino:-");
+        var cream = prompt("With Caream or not?");
+        var milk = prompt("& Milk or not?");
+
+        function makefarpp(farpp1,cream1,milk1){
+            var coffee = (farpp1 + " farppuccino " + "with "+ cream1 + " cream & "+ milk1 + " Milk is ready");
+            return coffee;
+        }
+
+        var coffee1 = makefarpp(farpp,cream,milk);
+        document.write(coffee1);
+    </script>
+</body>
+</html>

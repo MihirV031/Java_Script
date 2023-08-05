@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckBox</title>
+</head>
+<style>
+    .row1,.row2,.row3,.row4,.row5,.row6,.row7,.row8,.row9,.row10{
+        display: flex;
+    }
+    input{
+        width: 50px;
+        height: 50px;
+        box-shadow: 2px 2px 3px black;
+        margin:5px 10px;   
+    }
+</style>
+<body>
+    <div class="row">
+        <div class="row1">
+            <input type="checkbox" name="" id="" onchange="fs();" class="f-c">
+            <input type="checkbox" name="" id="" onchange="sc();" class="f-c s-c">
+            <input type="checkbox" name="" id="" onchange="td();" class="f-c t-c">
+            <input type="checkbox" name="" id="" onchange="ft();" class="f-c f-t">
+            <input type="checkbox" name="" id="" onchange="fi();" class="f-c f-i">
+            <input type="checkbox" name="" id="" onchange="st();" class="f-c s-t">
+            <input type="checkbox" name="" id="" onchange="sv();" class="f-c s-v">
+            <input type="checkbox" name="" id="" onchange="et();" class="f-c e-t">
+            <input type="checkbox" name="" id="" onchange="nt();" class="f-c n-t">
+            <input type="checkbox" name="" id="" onchange="th();" class="f-c t-h">
+        </div>
+        <div class="row2">
+            <input type="checkbox" name="" id="" onchange="sc1();" class="f-c s-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-c s-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-c s-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-t s-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-i s-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-t s-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-v s-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c e-t s-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c n-t s-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-h s-c1">
+        </div>
+        <div class="row3">
+            <input type="checkbox" name="" id="" onchange="td1();" class="f-c t-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-c t-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-c t-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-t t-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-i t-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-t t-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-v t-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c e-t t-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c n-t t-c1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-h t-c1">
+        </div>
+        <div class="row4">
+            <input type="checkbox" name="" id="" onchange="ft1();" class="f-c f-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-c f-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-c f-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-t f-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-i f-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-t f-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-v f-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c e-t f-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c n-t f-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-h f-t1">
+        </div>
+        <div class="row5">
+            <input type="checkbox" name="" id="" onchange="fi1();" class="f-c f-i1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-c f-i1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-c f-i1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-t f-i1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-i f-i1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-t f-i1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-v f-i1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c e-t f-i1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c n-t f-i1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-h f-i1">
+        </div>
+        <div class="row6">
+            <input type="checkbox" name="" id="" onchange="st1();" class="f-c s-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-c s-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-c s-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-t s-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-i s-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-t s-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-v s-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c e-t s-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c n-t s-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-h s-t1">
+        </div>
+        <div class="row7">
+            <input type="checkbox" name="" id="" onchange="sv1();" class="f-c s-v1"> 
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-c s-v1"> 
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-c s-v1"> 
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-t s-v1"> 
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-i s-v1"> 
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-t s-v1"> 
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-v s-v1"> 
+            <input type="checkbox" name="" id="" onchange="" class="f-c e-t s-v1"> 
+            <input type="checkbox" name="" id="" onchange="" class="f-c n-t s-v1"> 
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-h s-v1"> 
+        </div>
+        <div class="row8">
+            <input type="checkbox" name="" id="" onchange="et1();" class="f-c e-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-c e-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-c e-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-t e-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-i e-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-t e-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-v e-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c e-t e-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c n-t e-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-h e-t1">
+        </div>
+        <div class="row9">
+            <input type="checkbox" name="" id="" onchange="nt1();" class="f-c n-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-c n-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-c n-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-t n-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-i n-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-t n-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-v n-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c e-t n-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c n-t n-t1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-h n-t1">
+        </div>
+        <div class="row10">
+            <input type="checkbox" name="" id="" onchange="th1();" class="f-c t-h1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-c t-h1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-c t-h1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-t t-h1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c f-i t-h1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-t t-h1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c s-v t-h1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c e-t t-h1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c n-t t-h1">
+            <input type="checkbox" name="" id="" onchange="" class="f-c t-h t-h1">
+        </div>
+    </div>
+</body>
+<script>
+    function fs(){
+        var first = document.getElementsByClassName('f-c');
+        for(var i=0; i<first.length; i++){
+            
+            if(first[0].checked == true){
+                first[i].checked = true;
+            }else{
+                first[i].checked = false;
+            }
+        }
+    }
+    function sc(){
+        var second = document.getElementsByClassName('s-c');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function sc1(){
+        var second = document.getElementsByClassName('s-c1');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function td(){
+        var second = document.getElementsByClassName('t-c');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function td1(){
+        var second = document.getElementsByClassName('t-c1');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function ft(){
+        var second = document.getElementsByClassName('f-t');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function ft1(){
+        var second = document.getElementsByClassName('f-t1');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function fi(){
+        var second = document.getElementsByClassName('f-i');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function fi1(){
+        var second = document.getElementsByClassName('f-i1');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function st(){
+        var second = document.getElementsByClassName('s-t');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function st1(){
+        var second = document.getElementsByClassName('s-t1');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function sv(){
+        var second = document.getElementsByClassName('s-v');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function sv1(){
+        var second = document.getElementsByClassName('s-v1');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function et(){
+        var second = document.getElementsByClassName('e-t');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function et1(){
+        var second = document.getElementsByClassName('e-t1');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function nt(){
+        var second = document.getElementsByClassName('n-t');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function nt1(){
+        var second = document.getElementsByClassName('n-t1');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function th(){
+        var second = document.getElementsByClassName('t-h');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function th1(){
+        var second = document.getElementsByClassName('t-h1');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+    function frc(){
+        var second = document.getElementsByClassName('fr-c');
+        for(var i=0; i<second.length; i++){
+            if(second[0].checked == true){
+                second[i].checked = true;
+            }else{
+                second[i].checked = false;
+            }
+        }
+    }
+</script>
+</html>

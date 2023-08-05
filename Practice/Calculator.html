@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="all.min.css">
+    <style>
+
+        body
+        {
+            background:#AFB1B2;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .calculator {
+            border: 2px solid wheat;
+            box-shadow: 5px 4px 15px black;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        .calculator button 
+        {
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            font-weight: 600;
+            border-radius: 50%;
+            border: transparent;
+            margin: 8px;
+            background-color: #505050;
+            box-shadow: 1px 1px 5px white;
+        }
+        .calculator .col {
+            background-color: #ff9500;
+            color: white;
+        }
+
+        .answer {
+            text-align: end;
+            font-size: 45px;
+            align-items: center;
+        }
+
+        .answer {
+            padding: 10px;
+            width: 270px;
+            height: 60px;
+            font-size: 35px;
+            font-weight: 600;
+            border-radius: 0%;
+            background-color: black;
+            box-shadow: none;
+            color: white;
+        }
+
+        .crl {
+            text-align: start;
+            align-items: center;
+            padding: 10px 0px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" readonly id="Answer" class="answer">
+            <div class="crl">
+                <button onclick="cler()">AC</button>
+                <button onclick="del()">DE</button>
+            </div>
+            <div class="cal">
+                <button onclick="getdata('7')">7</button>
+                <button onclick="getdata('8')">8</button>
+                <button onclick="getdata('9')">9</button>
+                <button id="sum" onclick="data('+')" class="col">&plus;</button>
+            </div>
+            <div class="cal2">
+                <button onclick="getdata('4')">4</button>
+                <button onclick="getdata('5')">5</button>
+                <button onclick="getdata('6')">6</button>
+                <button id="sub" onclick="data('-')" class="col">&minus;</button>
+            </div>
+            <div class="cal3">
+                <button onclick="getdata('1')">1</button>
+                <button onclick="getdata('2')">2</button>
+                <button onclick="getdata('3')">3</button>
+                <button id="mul" onclick="data('*')" class="col">x</button>
+
+
+            </div>
+            <div class="cal4">
+                <button onclick="getdata('0')">0</button>
+                <button onclick="getdata('.')">.</button>
+                <button id="div" onclick="data('/')" class="col">&divide;</button>
+                <button id="eql" onclick="gotdata('=')" class="col">&equals;</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var frt, sec = 0, sing;
+    function getdata(n) {
+        frt = document.getElementById('Answer').value += n;
+    }
+    function data(a) {
+        frt = document.getElementById('Answer').value;
+        if (sing == '+') {
+            sec += parseInt(frt);
+        }
+        else if (sing == '-') {
+            sec -= parseInt(frt);
+        }
+        else if (sing == '*') {
+            sec *= parseInt(frt);
+        }
+        else if (sing == '/') {
+            sec /= parseInt(frt);
+        }
+        else {
+            sec = parseInt(frt);
+        }
+        sing = a;
+        document.getElementById('Answer').value = "";
+    }
+    function gotdata() {
+        sum = parseInt(sec) + parseInt(document.getElementById('Answer').value);
+        sub = parseInt(sec) - parseInt(document.getElementById('Answer').value);
+        mul = parseInt(sec) * parseInt(document.getElementById('Answer').value);
+        div = parseInt(sec) / parseInt(document.getElementById('Answer').value);
+        var result = 0;
+        if (sing == '+') {
+            result = sum;
+        }
+        else if (sing == '-') {
+            result = sub;
+        }
+        else if (sing == '*') {
+            result = mul;
+        }
+        else if (sing == '/') {
+            result = div;
+        }
+        document.getElementById('Answer').value = result;
+    }
+    function cler() {
+        document.getElementById('Answer').value = "";
+    }
+    function del() {
+        document.getElementById('Answer').value = document.getElementById('Answer').value.slice (0,-1);
+    }
+</script>
+
+</html>
